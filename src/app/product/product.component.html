@@ -1,0 +1,14 @@
+<p>Product List!</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>price</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td><button (click)="openDetails($event)"  [routerLink]='["/product",product.id]'>View{{product.id}}</button></td>
+  </tr>
+</table>
